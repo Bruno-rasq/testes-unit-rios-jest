@@ -1,0 +1,12 @@
+ -- unit testing 
+  - o que é:
+    - testa uma unidade de codigo.
+    
+  - como fazer com jest
+  - quando / como usar
+  - como isolar ainda mais o test com mock
+
+-- rodar jest
+  - npm install --save-dev jest
+  - npm test
+  
