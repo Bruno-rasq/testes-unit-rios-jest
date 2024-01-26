@@ -1,4 +1,4 @@
-const { sum, inOneHour } = require('./index')
+const { sum, inOneHour, romanNumerals } = require('./index')
 
 describe('Math Functions', () => {
   
@@ -24,5 +24,11 @@ describe('time functions', () => {
     expect(inOneHour()).toBe(3600000)
     global.Date.now = realDateNow
 
+  })
+})
+
+describe('converting functions', () => {
+  it('converts a decimal number to a roman number', () => {
+    expect(romanNumerals(1)).toBe('I')
   })
 })
