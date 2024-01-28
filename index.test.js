@@ -13,7 +13,14 @@ describe('Math Functions', () => {
   it('sums 2 numbers', () => {
     expect(sum(1, 2)).toBe(3)
   })
-  
+
+  test('add numbers to the zero', () => {
+    for(let i = 1; i < 5; i++){
+      for(let j = 1; j < 5; j++){
+        expect(sum(i, j)).not.toBe(0)
+      }
+    }
+  })
 })
 
 describe('time functions', () => {
@@ -30,5 +37,14 @@ describe('time functions', () => {
 describe('converting functions', () => {
   it('converts a decimal number to a roman number', () => {
     expect(romanNumerals(1)).toBe('I')
+  })
+})
+
+describe('object', () => {
+
+  test('attribui uma chave valor', () => {
+    const data = { one:1 }
+    data['two'] = 2
+    expect(data).toEqual({ one: 1, two: 2 })
   })
 })
