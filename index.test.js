@@ -1,5 +1,6 @@
 const { sum, inOneHour, romanNumerals } = require('./index')
 
+
 describe('Math Functions', () => {
   
   //beforeAll(() => console.log('before all'))
@@ -14,12 +15,26 @@ describe('Math Functions', () => {
     expect(sum(1, 2)).toBe(3)
   })
 
-  test('add numbers to the zero', () => {
+  test('add numbers to zero', () => {
     for(let i = 1; i < 5; i++){
       for(let j = 1; j < 5; j++){
         expect(sum(i, j)).not.toBe(0)
       }
     }
+  })
+
+  it('2 + 2', () => {
+    const val = 2 + 2;
+    const v2 = 0.1 + 0.2;
+    expect(val).toBeGreaterThan(1)
+    expect(val).toBeLessThan(5)
+    expect(val).toBe(4)
+    expect(v2).toBeCloseTo(0.3)
+
+    expect(val).toBeGreaterThanOrEqual(1)
+    expect(val).toBeLessThanOrEqual(5.5)
+    expect(val).not.toBe(7)
+    expect(val).not.toBeGreaterThan(9)
   })
 })
 
