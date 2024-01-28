@@ -1,13 +1,11 @@
 const { sum, inOneHour, romanNumerals } = require('./index')
 
+beforeAll(() => console
+.log('=========== Tests =========== '))
 
 describe('Math Functions', () => {
-  
-  //beforeAll(() => console.log('before all'))
 
   //beforeEach(() => conbsole.log('before each'))
-
-  //afterAll(() => console.log('after all'))
 
   //afterEach(() => console.log('after each'))
   
@@ -57,9 +55,34 @@ describe('converting functions', () => {
 
 describe('object', () => {
 
-  test('attribui uma chave valor', () => {
+  it('attribui uma chave valor', () => {
     const data = { one:1 }
     data['two'] = 2
-    expect(data).toEqual({ one: 1, two: 2 })
+    expect(data)
+      .toEqual({one: 1, two: 2})
+  })
+})
+
+
+describe('string', () => {
+
+  it('existe "stop" em christopher', () => {
+    expect('christopher').toMatch(/stop/)
+  })
+
+  it('nao possui "I" na palavra', () => {
+    expect("test").not.toMatch(/I/)
+  })
+})
+
+
+describe('array', () => {
+
+  test('Lista de Comprar', () => {
+    const lista = ['arroz', 'feijao', 'macarrao', 'carne']
+
+    expect(lista).not.toContain('ovo')
+    expect(lista).toContain('macarrao')
+    
   })
 })
